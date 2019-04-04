@@ -10,7 +10,9 @@ namespace WebApiPractice.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        [HttpGet]
+        [Route("api/getValues")]
+        public IEnumerable<string> GetValues()
         {
             return new string[] { "value1", "value2" };
         }
